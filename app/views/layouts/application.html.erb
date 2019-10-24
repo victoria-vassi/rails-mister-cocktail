@@ -7,9 +7,33 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   </head>
 
   <body>
+    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+
+    <div class = "navbar image text-center">
+      <%= link_to cocktails_path do %>
+        <%= image_tag "club.png", class: "image"; %>
+      <% end %>
+    </div>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <%= link_to 'Create New Cocktail', new_cocktail_path, float: "right"; %>
+      </li>
+
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
     <%= yield %>
+    <%= javascript_include_tag "application" %> <!-- from app/assets/javascripts/application.js -->
+    <%= javascript_pack_tag "application" %>    <!-- from app/javascript/packs/application.js -->
   </body>
 </html>

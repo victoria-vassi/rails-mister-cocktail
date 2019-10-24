@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 mx-auto">
+      <div class="card p-5" >
+        <h1>New Cocktail</h1>
+          <%= render 'form', cocktail: @cocktail, class: "btn btn-flat" %>
+          <%= link_to 'Back', @cocktail, class: "btn btn-flat" %>
+      </div>
+    </div>
+  </div>
+</div>
