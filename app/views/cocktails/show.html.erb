@@ -1,25 +1,35 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-6 mx-auto p-3">
-      <div class="card p-5" >
-        <h1> <%= @cocktail.name %> </h1>
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= @cocktail.image_url %>)">
-        </div>
+<div class="page-content">
+  <div class="wrapper" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.4)), url(<%= @cocktail.image_url %>)">
+      <h1 class="text-center" > <%= @cocktail.name %> </h1>
+  </div>
 
-        <p>
-          <strong> Ingredients:</strong>
-          <%= @cocktail.doses.each do |l| %>
-          <%= l.description %>
-          <%= l.ingredient.name %>
-        <% end %>
-        </p>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-7">
+        <h3> Description </h3>
+        <p> <%= @cocktail.description %> </p>
 
-        <div>
-        <%= link_to 'Add Ingredient', new_cocktail_dose_path(@cocktail) %> |
-        <%= link_to 'Delete Cocktail', cocktail_path(@cocktail),
-          method: :delete, data: { confirm: "Are you sure?" } %> |
-        <%= link_to 'Back', cocktails_path %>
-        </div>
+          <%= link_to "Edit", edit_cocktail_path(@cocktail), class: "btn btn-danger"%>
+
+          <button id="sweet-alert-demo" class="btn btn-danger">Delete Cocktail</button>
+          <%= link_to '', cocktail_path(@cocktail), method: :delete, id: "delete-link", class: "hidden" %>
+      </div>
+
+        <div class="col-xs-12 col-md-5">
+          <h3> Ingredient </h3>
+          <ul class = "list">
+                <% @cocktail.doses.each do |l| %>
+                <li>
+                  <strong> <%= l.ingredient.name %> </strong> -
+                  <%= l.description %>
+                  <%= link_to "(delete)", dose_path(l), method: :delete, data: { confirm: "Are you sure?" } %>
+                </li>
+              <% end %>
+            </ul>
+            <div>
+            <%= link_to "Edit", edit_dose_path(params[:id]), class: "btn btn-danger"%>
+            <%= link_to 'Add Ingredient', new_cocktail_dose_path(@cocktail), class: "btn btn-danger" %>
+          </div>
       </div>
     </div>
   </div>

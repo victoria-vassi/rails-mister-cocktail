@@ -2,11 +2,11 @@
   <div class="row">
     <div class="col-md-6 mx-auto p-3">
       <div class="card p-5" >
-        <h1>New Ingredient</h1>
-          <%= simple_form_for [@cocktail, @dose] do |f| %>
-          <%= f.association :ingredient %>
+        <h1>Edit Cocktail</h1>
+          <%= simple_form_for(@cocktail) do |f| %>
+          <%= f.input :name %>
            <%= f.input :description %>
-           <%= f.submit :submit %>
+           <%= f.submit :submit%>
           <% end %>
 
           <%= link_to 'Back', @cocktail, class: "btn btn-flat" %>
