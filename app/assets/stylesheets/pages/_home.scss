@@ -19,7 +19,10 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    font-family: "Courier New", "Helvetica", "sans-serif";
+    text-decoration: white;
+    a {
+      color: white;
+    }
 }
 
 .container {

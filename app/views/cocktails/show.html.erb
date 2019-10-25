@@ -1,7 +1,15 @@
 <div class="page-content">
+
+  <% unless @cocktail.photo.present? %>
   <div class="wrapper" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.4)), url(<%= @cocktail.image_url %>)">
       <h1 class="text-center" > <%= @cocktail.name %> </h1>
   </div>
+
+  <% else %>
+   <div class="wrapper" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.4)), url(<%= cl_image_path @cocktail.photo%>)">
+      <h1 class="text-center" > <%= @cocktail.name %> </h1>
+  </div>
+  <% end %>
 
   <div class="container">
     <div class="row">

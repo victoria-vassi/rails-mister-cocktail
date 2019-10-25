@@ -6,6 +6,8 @@
           <%= simple_form_for(@cocktail) do |f| %>
           <%= f.input :name %>
            <%= f.input :description %>
+            <%= f.input :photo %>
+            <%= f.input :photo_change, as: :hidden %>
            <%= f.submit :submit%>
           <% end %>
 
