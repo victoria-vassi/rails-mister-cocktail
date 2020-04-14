@@ -1,4 +1,4 @@
-<h1> Cocktails Club </h1> 
+<h1> Cocktail Club </h1> 
 
 <p> A rudimentary Cocktail collection website made for the purposes of completing Le Wagon Bootcamp. </p> 
 
