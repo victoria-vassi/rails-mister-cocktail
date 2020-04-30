@@ -1,24 +1,10 @@
-# README
+<h1> Cocktail Club </h1> 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<p> A rudimentary Cocktail collection website made for the purposes of completing Le Wagon Bootcamp. </p> 
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+<h2> Knowledge I put in practice </h2> 
+<ol> 
+  <li> Introducing a many to many relationship database schemas </li>
+  <li> MVC design pattern </li> 
+  <li> CRUD actions </li> 
+</ol>
