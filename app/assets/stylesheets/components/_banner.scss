@@ -1,6 +1,7 @@
 .banner {
   background-size: cover;
-  background-position: center;
+  background-repeat: no-repeat;
+  background-position: center center;
   position: fixed;
   top: 0;
   left: 0;
@@ -8,17 +9,39 @@
   min-height: 100%;
 }
 
-.banner h1 {
+.centered h1 {
   margin: 0;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 32px;
-  font-weight: bold;
+  font-weight: 20px;
 }
 
-.banner p {
+.centered p {
   font-size: 20px;
   color: white;
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
+
+.top-left {
+  margin-left: 20px;
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+.top-right {
+  margin-right: 20px;
+  position: absolute;
+  top: 33px;
+  right: 16px;
+}
+
+.centered {
+  position: absolute;
+  top: 30%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+}
+

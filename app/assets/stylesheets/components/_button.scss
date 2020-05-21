@@ -38,6 +38,7 @@
 }
 
 .btn-1 {
+  margin-top: 10px;
   color:white;
   font-weight: 100;
 
@@ -70,4 +71,13 @@
     stroke-dashoffset: 48;
     transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
   }
+}
+
+
+.user-link {
+  color:white;
+}
+
+.user-link:hover {
+  color:#c6a530;
 }
