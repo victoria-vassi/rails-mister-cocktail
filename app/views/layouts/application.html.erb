@@ -2,7 +2,7 @@
 <html>
   <head>
     <%= favicon_link_tag 'favicon.png' %>
-    <title>RailsMisterCocktail</title>
+    <title>Mister Cocktail</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -13,29 +13,9 @@
   </head>
 
   <body>
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-
-    <div class = "navbar image text-center">
-      <%= link_to cocktails_path do %>
-        <%= image_tag "club.png", class: "image"; %>
-      <% end %>
-    </div>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <%= link_to 'Create New Cocktail', new_cocktail_path, float: "right"; %>
-      </li>
-
-        </div>
-      </li>
-    </ul>
-  </div>
-</div>
-
     <%= yield %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= javascript_include_tag "application" %> <!-- from app/assets/javascripts/application.js -->
     <%= javascript_pack_tag "application" %>    <!-- from app/javascript/packs/application.js -->
   </body>

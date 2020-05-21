@@ -16,3 +16,58 @@
   list-style: none;
   padding: 0px;
 }
+
+.btn {
+  cursor: pointer;
+  font-size:16px;
+  font-weight: 400;
+  line-height: 45px;
+  margin: 0 0 2em;
+  max-width: 160px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;
+
+  @media(min-width: 600px) {
+    margin: 0 1em 2em;
+  }
+
+  &:hover { text-decoration: none; }
+
+}
+
+.btn-1 {
+  color:white;
+  font-weight: 100;
+
+  svg {
+    height: 45px;
+    left: 0;
+    position: absolute;
+    top: -3px;
+    width: 100%;
+  }
+
+  rect {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2;
+    stroke-dasharray: 422, 0;
+    transition: all 0.35s linear;
+  }
+}
+
+.btn-1:hover {
+  color:#c6a530;
+  font-weight: 900;
+  letter-spacing: 1px;
+
+  rect {
+    stroke: #c6a530;
+    stroke-width: 5;
+    stroke-dasharray: 15, 310;
+    stroke-dashoffset: 48;
+    transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+}
