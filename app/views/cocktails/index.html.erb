@@ -2,18 +2,29 @@
 <div class="container justify-content-center">
     <div class="cards p-3">
     <% @cocktails.each do |cocktail| %>
-
-     <% unless cocktail.photo.present? %>
-        <div class="wrapper" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.4)), url(<%= cocktail.image_url %>)">
-            <%= link_to cocktail.name, cocktail_path(cocktail) %>
-        </div>
-
-        <% else %>
-         <div class="wrapper" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.4)), url(<%= cl_image_path cocktail.photo%>)">
-            <%= link_to cocktail.name, cocktail_path(cocktail) %>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <% unless cocktail.photo.present? %>
+          <div class="wrapper" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.4)), url(<%= cocktail.image_url %>)">
+              <%= link_to cocktail.name, cocktail_path(cocktail) %>
           </div>
-      <% end %>
+
+          <% else %>
+           <div class="wrapper" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.4)), url(<%= cl_image_path cocktail.photo%>)">
+              <%= link_to cocktail.name, cocktail_path(cocktail) %>
+            </div>
+        <% end %>
+        </div>
+        <div class="flip-card-back">
+          <h1>John Doe</h1>
+          <p>Architect & Engineer</p>
+          <p>We love that guy</p>
+        </div>
+      </div>
+    </div>
   <% end %>
   </div>
 </div>
+
 
