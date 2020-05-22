@@ -83,10 +83,13 @@
 
 .create-button {
     border-radius: 6px;
+    border: 1px solid #c6a530 !important;
     background-color: transparent;
-    color: #f69557;
-
+    color: #c6a530;
     padding: 9px 20px;
+    &:hover {
+      color: #b59629;
+    }
 }
 
 .buttons-card a {
@@ -96,5 +99,4 @@
     &:hover {
       color: #c6a530;
     }
-
 }

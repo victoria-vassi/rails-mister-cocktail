@@ -1,3 +1,4 @@
+<%= render 'shared/navbar' %>
 <div class="container">
   <div class="row">
     <div class="col-md-6 mx-auto p-3">
@@ -6,7 +7,7 @@
           <%= simple_form_for [@cocktail, @dose] do |f| %>
           <%= f.association :ingredient %>
            <%= f.input :description %>
-           <%= f.submit :submit %>
+           <%= f.submit :submit, class: "create-button" %>
           <% end %>
 
           <%= link_to 'Back', @cocktail, class: "btn btn-flat" %>

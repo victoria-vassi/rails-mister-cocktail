@@ -57,3 +57,21 @@
   bottom: 0;
   width: 100%;
 }
+
+.one-side {
+  margin-left: 15px;
+  font-size: 25px;
+}
+
+.two-side {
+  margin-right: 15px;
+  font-size: 25px;
+}
+
+.text-center a {
+  color: black;
+
+  &:hover {
+      color: #b59629;
+    }
+}

@@ -19,7 +19,11 @@
         <div class="flip-card-back">
           <div class=" card--back">
             <div class="name-back">
-                <h4 class="text-center mt-3"><%= cocktail.name.upcase %></h4>
+                <h4 class="text-center mt-3">
+                  <%= link_to cocktail_path(cocktail) do %>
+                  <%= cocktail.name.upcase! %>
+                  <% end %>
+                  </h4>
                 <hr class="mb-1 mt-0">
             </div>
             <div class="description">

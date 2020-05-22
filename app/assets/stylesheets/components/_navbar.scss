@@ -24,3 +24,21 @@
     margin-right: auto;
     margin-top: 10%;
 }
+
+.navbar{
+  padding-right: 40px;
+  padding-left: 30px;
+}
+
+.nav-link {
+  color: white;
+  &:hover {
+    color: #c6a530;
+  }
+}
+
+.dropdown-item {
+  &:focus {
+    background-color: #c6a530;
+  }
+}
