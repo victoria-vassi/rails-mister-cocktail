@@ -17,9 +17,39 @@
         <% end %>
         </div>
         <div class="flip-card-back">
-          <h1>John Doe</h1>
-          <p>Architect & Engineer</p>
-          <p>We love that guy</p>
+          <div class=" card--back">
+            <div class="name-back">
+                <h4 class="text-center mt-3"><%= cocktail.name.upcase %></h4>
+                <hr class="mb-1 mt-0">
+            </div>
+            <div class="description">
+              <% cocktail.doses.each do |dose|%>
+                <tr>
+                  <h2 class="card-text py-1 mt-2 d-flex justify-content-between">
+                    <div class="one-side">
+                      <td>
+                       <%= dose.ingredient.name %>
+                      </td>
+                     </div>
+                    <div class="two-side">
+                      <td> <%= dose.description %> </td>
+                      <%= link_to dose_path(dose), method: :delete, data: { confirm: "Are you sure you want to remove #{dose.ingredient.name} from #{cocktail.name.upcase}?"} do %>
+                       <%= image_tag('delete.png', height: '11px', style: "padding-left: 5px;") %>
+                       <% end %>
+                    </div>
+                  </h2>
+                </tr>
+              <% end %>
+            </div>
+            <div class=" card-footer buttons-card space-around">
+              <%= link_to new_cocktail_dose_path(cocktail) do %>
+              <i class="fas fa-plus-circle"></i>
+              <% end %>
+              <%= link_to cocktail_path(cocktail), method: :delete, data: { confirm: "Are you sure you want to delete #{cocktail.name.upcase} from your collection?"} do %>
+              <i class="fa fa-trash-alt" style="font-weight: lighter;"></i>
+              <% end %>
+            </div>
+          </div>
         </div>
       </div>
     </div>

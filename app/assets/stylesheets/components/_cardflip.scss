@@ -37,7 +37,23 @@
 
 /* Style the back side */
 .flip-card-back {
-  background-color: dodgerblue;
-  color: white;
+  background-color: white;
+  color: black;
   transform: rotateY(180deg);
+}
+
+.description {
+  width: 98%;
+  height: 73%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  line-height: 1.4em;
+  padding-right: 10px;
+}
+
+.card-footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }

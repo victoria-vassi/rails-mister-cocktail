@@ -17,7 +17,7 @@
   padding: 0px;
 }
 
-.btn {
+.button-home {
   cursor: pointer;
   font-size:16px;
   font-weight: 400;
@@ -73,7 +73,6 @@
   }
 }
 
-
 .user-link {
   color:white;
 }
@@ -86,6 +85,16 @@
     border-radius: 6px;
     background-color: transparent;
     color: #f69557;
-    border: #f69557 solid 1px;
+
     padding: 9px 20px;
+}
+
+.buttons-card a {
+  display: inline-block;
+  text-align: center;
+  color: lightgray;
+    &:hover {
+      color: #c6a530;
+    }
+
 }

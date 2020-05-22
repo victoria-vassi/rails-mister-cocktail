@@ -1,5 +1,6 @@
-<div class="page-content">
+<%= render 'shared/navbar' %>
 
+<div class="page-content">
   <% unless @cocktail.photo.present? %>
   <div class="wrapper" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.4)), url(<%= @cocktail.image_url %>)">
       <h1 class="text-center" > <%= @cocktail.name %> </h1>
@@ -7,7 +8,7 @@
 
   <% else %>
    <div class="wrapper" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.4)), url(<%= cl_image_path @cocktail.photo%>)">
-      <h1 class="text-center" > <%= @cocktail.name %> </h1>
+      <h1 class="text-center"> <%= @cocktail.name %> </h1>
   </div>
   <% end %>
 
@@ -30,7 +31,11 @@
                 <li>
                   <strong> <%= l.ingredient.name %> </strong> -
                   <%= l.description %>
-                  <%= link_to "(delete)", dose_path(l), method: :delete, data: { confirm: "Are you sure?" } %>
+
+                  <%= link_to dose_path(l), method: :delete, data: { confirm: "Are you sure you want to remove #{@ingredients.name} from #{@cocktail.name.upcase}?"} do %>
+                  <%= image_tag('delete.png', height: '11px', style: "padding-left: 5px;") %>
+                  <% end %>
+
                 </li>
               <% end %>
             </ul>
