@@ -11,6 +11,7 @@ gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary', '~> 1.9.1'
 gem 'carrierwave', '~> 1.2'
 gem 'devise'
+gem 'pundit'
 # Use Puma as the app server
 gem 'puma', '~> 3.12.6'
 # Use SCSS for stylesheets
