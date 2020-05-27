@@ -17,10 +17,10 @@
       <div class="col-xs-12 col-sm-7">
         <h3> Description </h3>
         <p> <%= @cocktail.description %> </p>
-          <% if policy(cocktail).edit? %>
+          <% if policy(@cocktail).edit? %>
             <%= link_to "Edit", edit_cocktail_path(@cocktail), class: "btn btn-danger"%>
           <% end %>
-          <% if policy(cocktail).destroy? %>
+          <% if policy(@cocktail).destroy? %>
           <button id="sweet-alert-demo" class="btn btn-danger">Delete Cocktail</button>
             <%= link_to '', cocktail_path(@cocktail), method: :delete, id: "delete-link", class: "hidden" %>
           <% end %>
