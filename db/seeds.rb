@@ -59,4 +59,3 @@ cocktails_attributes.each do |cocktail|
 end
 
 puts "Finish creating 6 cocktails"
-
