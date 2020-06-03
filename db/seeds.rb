@@ -12,5 +12,3 @@ ingredient_hash.each do |ing|
 end
 
 current_user = User.current_scope
-
-
