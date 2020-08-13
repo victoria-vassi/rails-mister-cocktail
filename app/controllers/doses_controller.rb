@@ -2,6 +2,8 @@ class DosesController < ApplicationController
   def new
     @cocktail = Cocktail.find(params[:cocktail_id])
     @dose = Dose.new
+
+    authorize @dose
   end
 
   def create
@@ -9,6 +11,7 @@ class DosesController < ApplicationController
     @dose = Dose.new(dose_params)
 
     @dose.cocktail = @cocktail
+    authorize @dose
     if @dose.save
       redirect_to cocktail_path(@cocktail)
     else
