@@ -6,7 +6,6 @@ class DosePolicy < ApplicationPolicy
   end
 
   def home?
-    authorize @user, :user
     true
   end
 
@@ -19,11 +18,11 @@ class DosePolicy < ApplicationPolicy
   end
 
   def update?
-    user_is_owner?
+    true
   end
 
   def destroy?
-    user_is_owner?
+    true
   end
 
   private
